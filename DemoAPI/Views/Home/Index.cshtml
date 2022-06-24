@@ -1,0 +1,145 @@
+﻿<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="/Scripts/jquery.signalR-2.4.2.js"></script>
+<script src="/signalr/hubs"></script>
+<style>
+    .chessboard {
+        width: 850px;
+        height: 850px;
+        background-image: url('/Images/bancotuong.jpg');
+    }
+
+    .chessnode {
+        position: relative;
+        width: 50px;
+        height: 50px;
+    }
+
+    .chessimgnode {
+        width: 50px;
+        height: 50px;
+        position: relative;
+    }
+</style>
+
+
+
+<div id="app">
+    <div class="chessboard">
+        <div v-for="item in chessNode" v-if="item !== null">
+            <div :id="item.id" class="chessnode">
+                <img :src="'/' + item.src" class="chessimgnode" v-bind:style="{ display: item.visible, top: item.top + 'px', left: item.left + 'px'}" />
+            </div>
+        </div>
+    </div>
+    {{ message }}
+    total record: {{total}}
+    <input v-on:click="getTotal" type="button" value="get total" />
+    List Student
+    <ul id="demo">
+        <li v-for="item in students" v-if="item !== null">
+            {{item.Id}} {{item.Name}}
+        </li>
+    </ul>
+
+    class room
+    name: <input v-model="classRoom" type="text" value="" />
+    class room name: {{classRoom}}
+
+    <input v-on:click="insertClassRoom" type="button" value="insert Class Room" />
+
+    <div>
+        <ul id="discussion"></ul>
+    </div>
+</div>
+<script>
+    var stObject = {};
+
+    var app = new Vue({
+        el: '#app',
+        data: {
+            message: 'Hello Vue! 112',
+            total: 0,
+            students: [],
+            classRoom: '',
+            chessNode: []
+        },
+        methods: {
+            getTotal() {
+                axios
+                    .get('/api/Student/getbyId?Id=1')
+                    .then(response => {
+                        this.total = response.data.total;
+                        this.students = response.data.data;
+                        console.log(this.students);
+                    })
+                    .catch(error => {
+                        console.log(error)
+                    })
+                    .finally()
+            },
+            insertClassRoom() {
+                var payload = { Name: this.classRoom };
+                var res = axios.post('/api/ClassRoom/insertClassRoom', payload);
+                console.log(res.data);
+            },
+            getchessNode() {
+                var res = axios.post('/api/chess/getchessnode').then(response => {
+                    this.chessNode = response.data.chessnode;
+                    //this.chessRoom = response.data.data;
+                    console.log(response.data.chessnode);
+                })
+                    .catch(error => {
+                        console.log(error)
+                    })
+                    .finally();
+            }
+        },
+        updated: function () {
+            $(".chessnode").draggable({
+                start: function (event, ui) {
+
+                },
+                drag: function () {
+
+                },
+                stop: function (event, ui) {
+                    //console.log('x=' + ui.position.top + '  y=' + ui.position.left);
+                    var movelist = [{ id: this.id, top: ui.position.top, left: ui.position.left, visible: true }];
+
+                    var res = axios.post('/api/chess/movenode', movelist).then(response => {
+                        //this.chessRoom = response.data.data;
+                        //alert(response);
+
+                    })
+                        .catch(error => {
+                            console.log(error)
+                        })
+                        .finally();
+
+                }
+            });
+        },
+        mounted: function () {
+            var chat = $.connection.requestlog;
+            $.connection.hub.start().done(function () {
+
+            });
+            chat.client.postToClient = function (data) {
+                //$('#discussion').append('Message' + data + '<br />');
+
+                var result = [];
+                result = JSON.parse(data);
+                for (var i = 0; i < result.length; i++) {
+                    var node = $("#" + result[i].id);
+                    node.css({ 'top': result[i].top + 'px' });
+                    node.css({ 'left': result[i].left + 'px' });
+                    node.css({ 'display': result[i].visible });
+                    //node.css({ 'top': result[i].top + 'px, left: ' + result[i].left + 'px, display:' + result[i].visible});
+                    break;
+                }
+            };
+            this.getchessNode();
+        }
+    })
+</script>

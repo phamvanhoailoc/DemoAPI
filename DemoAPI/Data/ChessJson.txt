@@ -1,0 +1,9 @@
+﻿[
+	{"id": "tuongden", "src":"Images/tuongden.svg", "top":69, "left":400, "visible": "inline"},
+	{"id": "tuongdo", "src":"Images/tuongdo.svg", "top":400, "left":326, "visible": "inline"},
+	{"id": "tuongden1", "src":"Images/tuongden1.svg", "top":-30, "left":253, "visible": "inline"},
+	{"id": "tuongdensy", "src":"Images/tuongdensy.svg", "top":-4, "left":250, "visible": "inline"},
+	{"id": "tuongdensy1", "src":"Images/tuongdensy.svg", "top":-14, "left":253, "visible": "inline"},
+	{"id": "tuongdosy", "src":"Images/tuongdosy.svg", "top":-50, "left":248, "visible": "inline"},
+	{"id": "tuongdosy1", "src":"Images/tuongdosy.svg", "top":-45, "left":253, "visible": "inline"}
+]

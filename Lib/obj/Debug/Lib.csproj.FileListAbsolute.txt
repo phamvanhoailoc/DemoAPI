@@ -1,0 +1,33 @@
+C:\Users\toannguyen\source\repos\DemoAPI\Lib\obj\Debug\Lib.csprojAssemblyReference.cache
+C:\Users\toannguyen\source\repos\DemoAPI\Lib\obj\Debug\Lib.csproj.CoreCompileInputs.cache
+C:\Users\toannguyen\source\repos\DemoAPI\Lib\bin\Debug\Lib.dll
+C:\Users\toannguyen\source\repos\DemoAPI\Lib\bin\Debug\Lib.pdb
+C:\Users\toannguyen\source\repos\DemoAPI\Lib\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\toannguyen\source\repos\DemoAPI\Lib\bin\Debug\EntityFramework.dll
+C:\Users\toannguyen\source\repos\DemoAPI\Lib\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\toannguyen\source\repos\DemoAPI\Lib\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\toannguyen\source\repos\DemoAPI\Lib\obj\Debug\Lib.csproj.CopyComplete
+C:\Users\toannguyen\source\repos\DemoAPI\Lib\obj\Debug\Lib.dll
+C:\Users\toannguyen\source\repos\DemoAPI\Lib\obj\Debug\Lib.pdb
+C:\Users\toannguyen\Downloads\co tuong\DemoAPI\Lib\bin\Debug\Lib.dll
+C:\Users\toannguyen\Downloads\co tuong\DemoAPI\Lib\bin\Debug\Lib.pdb
+C:\Users\toannguyen\Downloads\co tuong\DemoAPI\Lib\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\toannguyen\Downloads\co tuong\DemoAPI\Lib\bin\Debug\EntityFramework.dll
+C:\Users\toannguyen\Downloads\co tuong\DemoAPI\Lib\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\toannguyen\Downloads\co tuong\DemoAPI\Lib\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\toannguyen\Downloads\co tuong\DemoAPI\Lib\obj\Debug\Lib.csprojAssemblyReference.cache
+C:\Users\toannguyen\Downloads\co tuong\DemoAPI\Lib\obj\Debug\Lib.csproj.CoreCompileInputs.cache
+C:\Users\toannguyen\Downloads\co tuong\DemoAPI\Lib\obj\Debug\Lib.csproj.CopyComplete
+C:\Users\toannguyen\Downloads\co tuong\DemoAPI\Lib\obj\Debug\Lib.dll
+C:\Users\toannguyen\Downloads\co tuong\DemoAPI\Lib\obj\Debug\Lib.pdb
+E:\Hoc Tap\quan li du an\DemoAPI\Lib\bin\Debug\Lib.dll
+E:\Hoc Tap\quan li du an\DemoAPI\Lib\bin\Debug\Lib.pdb
+E:\Hoc Tap\quan li du an\DemoAPI\Lib\bin\Debug\EntityFramework.SqlServer.dll
+E:\Hoc Tap\quan li du an\DemoAPI\Lib\bin\Debug\EntityFramework.dll
+E:\Hoc Tap\quan li du an\DemoAPI\Lib\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+E:\Hoc Tap\quan li du an\DemoAPI\Lib\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\Hoc Tap\quan li du an\DemoAPI\Lib\obj\Debug\Lib.csproj.AssemblyReference.cache
+E:\Hoc Tap\quan li du an\DemoAPI\Lib\obj\Debug\Lib.csproj.CoreCompileInputs.cache
+E:\Hoc Tap\quan li du an\DemoAPI\Lib\obj\Debug\Lib.csproj.CopyComplete
+E:\Hoc Tap\quan li du an\DemoAPI\Lib\obj\Debug\Lib.dll
+E:\Hoc Tap\quan li du an\DemoAPI\Lib\obj\Debug\Lib.pdb
